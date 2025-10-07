@@ -1032,6 +1032,12 @@ footer {
 margin-top: 110px;
 }
 
+
+footer .footer-holder {
+gap: 40px;
+}
+
+
 footer .footer-header {
 
   font-size: 20px;
@@ -1040,7 +1046,6 @@ footer .footer-header {
 footer a {
   font-size: 14px;
   color: #a3a3a3;
-  margin-top: 1.3rem;
 }
 
 footer .copyright {font-size: 14px;}
@@ -1077,13 +1082,48 @@ footer .social-media-links {
 
   display: flex;
   gap: 40px;
-  justify-content: center;
 }
 
 footer .social-media-links a {
 
   font-size: 17px;
 }
+
+
+.newsletter-signup { 
+
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.newsletter-signup h5 {
+  min-width: 140px;
+}
+
+
+.newsletter-signup p {
+  max-width: 150px;
+}
+
+.newsletter-signup input {
+  border: 0;
+  background-color: #2a2a2a;
+  color: #a3a3a3;
+  border-bottom: 1px solid #a3a3a3;
+}
+
+.newsletter-signup input:focus {
+  
+  background-color: #414141;
+  color: white;
+}
+
+.newsletter-signup .btn-light {
+  border: 0;
+  background-color: #535353;
+  color: #e1e1e1;
+}
+
 
 
 /* mobile tweaks */
@@ -1101,6 +1141,9 @@ footer .social-media-links a {
 
     padding-left: 15%;
   }
+
+
+  
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */
@@ -1185,6 +1228,33 @@ footer .social-media-links a {
     display: grid;
     grid-template-columns: auto auto auto auto;
   }
+
+  
+
+  .footer-holder div:nth-child(1) {
+
+    order: 1;
+  }
+
+  .footer-holder div:nth-child(2) {
+
+    order: 3;
+  }
+
+  .footer-holder div:nth-child(3) {
+
+    order: 2;
+  }
+
+  .footer-holder div:nth-child(4) {
+
+    order: 6;
+  }
+
+  .footer-holder div:nth-child(5) {
+
+    order: 4;
+  }
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
@@ -1193,6 +1263,33 @@ footer .social-media-links a {
 
     display: grid;
     grid-template-columns: auto auto;
+  }
+
+
+
+  .footer-holder div:nth-child(1) {
+
+    order: 1;
+  }
+
+  .footer-holder div:nth-child(2) {
+
+    order: 4;
+  }
+
+  .footer-holder div:nth-child(3) {
+
+    order: 2;
+  }
+
+  .footer-holder div:nth-child(4) {
+
+    order: 6;
+  }
+
+  .footer-holder div:nth-child(5) {
+
+    order: 3;
   }
 }
 

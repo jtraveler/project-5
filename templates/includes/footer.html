@@ -13,9 +13,9 @@
     <section class="px-3">
       <div class="container text-md-start mt-5">
         <!-- Grid row -->
-        <div class="row mt-3">
+        <div class="row mt-3 footer-holder">
           <!-- Grid column -->
-          <div class="col-md-12 col-lg-4 col-xl-3 mb-4 mr-5">
+          <div class="col-md-12 col-lg-5 col-xl-3">
             <!-- Content -->
             <a href="{% url 'home' %}" class="brand-text">BIRCHLIN</a>
             
@@ -26,7 +26,7 @@
           <!-- Grid column -->
 
          
-          <div class="col-md-12 col-lg-6 col-xl-5 mx-auto mb-4 pr-4 pr-lg-0 pr-xl-4">
+          <div class="col-md-12 col-lg-6 col-xl-5 pr-4 pr-lg-0 pr-xl-4">
             <!-- Links -->
             <h3 class="footer-header mb-4">Browse by Category</h3>
             
@@ -71,7 +71,7 @@
             
           </div>
 
-          <div class="col-md-12 col-lg-5 col-xl-3 mx-auto ml-lg-0 pr-xl-0 mr-xl-0">
+          <div class="col-md-12 col-lg-4 col-xl-3 mx-auto ml-lg-0 pr-xl-0 mr-xl-0">
             <!-- Links -->
             <h3 class="footer-header mb-4">Info</h3>
               <div class="grid-container-info">
@@ -91,32 +91,57 @@
             <p>
               <a href="tel:+18005555555" aria-label="Customer Support Hotline">Support: 1-800-555-5555</a>
             </p>
-            
           </div>
+
+          <div class="col-md-12 col-lg-5 col-xl-3 mb-4">
+              <div class="social-media-links">
+                <a href="https://www.facebook.com" class="text-white mr-2" aria-label="Visit Birchlin on Facebook">
+                    <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.x.com" class="text-white mr-2" aria-label="Follow Birchlin on X">
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.instagram.com" class="text-white" aria-label="Follow Birchlin on Instagram">
+                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                </a>
+                  
+              </div>
+          </div>
+
+          <div class="col-md-12 col-lg-5 col-xl-8 mb-4 pr-4 pr-lg-0 pr-xl-4">
+            <!-- Newsletter Signup -->
+            <div class="newsletter-signup d-flex">
+              <h5 class="mb-3">Stay Updated</h5>
+              <p class="small">Subscribe for latest gear updates and offers</p>
+              <form method="POST" action="{% url 'newsletter_signup' %}" class="newsletter-form">
+                {% csrf_token %}
+                <div class="input-group">
+                  <input type="email" name="email" class="form-control" 
+                         placeholder="Enter your email" required aria-label="Email address">
+                  <div class="input-group-append">
+                    <button type="submit" class="btn btn-light">Subscribe</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+
+          </div>
+
+          
           
         </div>
+
+        
+            
        
       </div>
     </section>
     <!-- Section: Links  -->
 
     <!-- Copyright -->
-    <div
-         class="text-center p-4 mt-5 copyright"
-         style="background-color: rgba(0, 0, 0, 0.2)"
-         >
-         <div class="social-media-links">
-          <a href="https://www.facebook.com" class="text-white mr-2" aria-label="Visit Birchlin on Facebook">
-              <i class="fab fa-facebook-f" aria-hidden="true"></i>
-          </a>
-          <a href="https://www.x.com" class="text-white mr-2" aria-label="Follow Birchlin on X">
-              <i class="fab fa-twitter" aria-hidden="true"></i>
-          </a>
-          <a href="https://www.instagram.com" class="text-white" aria-label="Follow Birchlin on Instagram">
-              <i class="fab fa-instagram" aria-hidden="true"></i>
-          </a>
-          
-      </div>
+    <div class="text-center p-4 mt-5 copyright"style="background-color: rgba(0, 0, 0, 0.2)">
+      © 2025 Birchlin
     </div>
     <!-- Copyright -->
   </footer>
