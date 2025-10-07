@@ -31,6 +31,7 @@ urlpatterns = [
     path('about/', about, name='about'),
     path('privacy-policy/', privacy_policy, name='privacy_policy'),
     path('terms/', terms, name='terms'),
+    path('newsletter/', include('newsletter.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 # Add static files serving in development

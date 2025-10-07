@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'checkout',
     'profiles',
     'contact',
+    'newsletter',
 
     # Cleanup app (must be at the end)
     'django_cleanup.apps.CleanupConfig',
